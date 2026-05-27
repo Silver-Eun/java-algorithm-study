@@ -1,9 +1,8 @@
 package Lv0;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class ex181889 {
+public class ex181888 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -18,7 +17,7 @@ public class ex181889 {
 
         int n = sc.nextInt();
 
-        ex181889 outer = new ex181889();
+        ex181888 outer = new ex181888();
         Solution sol = outer.new Solution();
 
         int[] result = sol.solution(num_list, n);
@@ -32,9 +31,14 @@ public class ex181889 {
 
     class Solution {
         public int[] solution(int[] num_list, int n) {
-            int[] answer = {};
 
-            answer = Arrays.copyOfRange(num_list, 0, n);
+            int[] answer = new int[(num_list.length + n - 1) / n];
+
+            int idx = 0;
+
+            for (int i = 0; i < num_list.length; i += n) {
+                answer[idx++] = num_list[i];
+            }
 
             return answer;
         }
