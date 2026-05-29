@@ -7,6 +7,21 @@ public class ex181887 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        int len = sc.nextInt();
+
+        int[] num_list = new int[len];
+
+        for (int i = 0; i < len; i++) {
+            num_list[i] = sc.nextInt();
+        }
+
+        ex181887 outer = new ex181887();
+        Solution sol = outer.new Solution();
+
+        int result = sol.solution(num_list);
+
+        System.out.println(result);
+
         sc.close();
     }
 
