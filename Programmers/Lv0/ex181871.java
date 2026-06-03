@@ -17,8 +17,6 @@ public class ex181871 {
         System.out.println(result);
 
         sc.close();
-
-        sc.close();
     }
 
     class Solution {
