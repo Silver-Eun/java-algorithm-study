@@ -8,7 +8,27 @@ public class ex181860 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        int n = sc.nextInt();
 
+        int[] arr = new int[n];
+        boolean[] flag = new boolean[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        for (int i = 0; i < n; i++) {
+            flag[i] = sc.nextBoolean();
+        }
+
+        ex181860 outer = new ex181860();
+        Solution sol = outer.new Solution();
+
+        int[] result = sol.solution(arr, flag);
+
+        for (int num : result) {
+            System.out.print(num + " ");
+        }
         sc.close();
     }
 
