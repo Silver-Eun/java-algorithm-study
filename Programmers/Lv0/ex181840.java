@@ -19,7 +19,7 @@ public class ex181840 {
         ex181840 outer = new ex181840();
         Solution sol = outer.new Solution();
 
-       int result = sol.solution(int_list, ex);
+        int result = sol.solution(int_list, ex);
 
         System.out.println(result);
 
@@ -30,8 +30,8 @@ public class ex181840 {
         public int solution(int[] num_list, int n) {
             int answer = 0;
 
-            for(int i = 0; i < num_list.length; i++) {
-                if(num_list[i] == n) {
+            for (int i = 0; i < num_list.length; i++) {
+                if (num_list[i] == n) {
                     answer = 1;
                     break;
                 }
