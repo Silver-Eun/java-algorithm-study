@@ -2,7 +2,7 @@ package Lv0;
 
 import java.util.Scanner;
 
-public class ex120923 {
+public class ex120922 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -10,10 +10,10 @@ public class ex120923 {
         int num = sc.nextInt();
         int total = sc.nextInt();
 
-        ex120923 outer = new ex120923();
+        ex120922 outer = new ex120922();
         Solution sol = outer.new Solution();
 
-        int[] result = sol.solution(num, total);
+        int result = sol.solution(num, total);
 
         System.out.println(result);
 
@@ -21,15 +21,8 @@ public class ex120923 {
     }
 
     class Solution {
-        public int[] solution(int num, int total) {
-
-            int[] answer = new int[num];
-
-            int start = total / num - (num - 1) / 2;
-
-            for (int i = 0; i < num; i++) {
-                answer[i] = start + i;
-            }
+        public int solution(int M, int N) {
+            int answer = M * N - 1;
 
             return answer;
         }
