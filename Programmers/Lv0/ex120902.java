@@ -21,17 +21,19 @@ public class ex120902 {
 
     class Solution {
         public int solution(String my_string) {
-            int answer = 0;
 
-            String[] a = my_string.split(" ");
+            String[] arr = my_string.split(" ");
 
-            int A = Integer.parseInt(a[0]);
-            int B = Integer.parseInt(a[2]);
+            int answer = Integer.parseInt(arr[0]);
 
-            if (a[1].equals("+"))
-                answer = A + B;
-            else
-                answer = A - B;
+            for (int i = 1; i < arr.length; i += 2) {
+
+                if (arr[i].equals("+")) {
+                    answer += Integer.parseInt(arr[i + 1]);
+                } else {
+                    answer -= Integer.parseInt(arr[i + 1]);
+                }
+            }
 
             return answer;
         }
