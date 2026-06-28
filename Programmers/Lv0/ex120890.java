@@ -28,20 +28,19 @@ public class ex120890 {
 
     class Solution {
         public int solution(int[] array, int n) {
-            int answer = 0;
 
-            int cnt = n;
+            int answer = array[0];
+            int cnt = Math.abs(n - array[0]);
 
-            for (int i = 0; i < array.length; i++) {
-                int a = Math.abs(n - array[i]);
+            for (int i = 1; i < array.length; i++) {
+                int diff = Math.abs(n - array[i]);
 
-                if (a < cnt) {
-                    cnt = a;
-                    answer = array[i];
-                } else if (a == cnt && array[i] < answer) {
+                if (diff < cnt || (diff == cnt && array[i] < answer)) {
+                    cnt = diff;
                     answer = array[i];
                 }
             }
+
             return answer;
         }
     }
