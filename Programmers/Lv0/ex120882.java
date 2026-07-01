@@ -14,7 +14,7 @@ public class ex120882 {
 
         for (int i = 0; i < a; i++) {
             for(int j = 0; j < b; j++) {
-                arr[a][b] = sc.nextInt();
+                arr[i][j] = sc.nextInt();
             }
         }
 
