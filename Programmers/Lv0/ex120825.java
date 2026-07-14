@@ -8,7 +8,7 @@ public class ex120825 {
         Scanner sc = new Scanner(System.in);
 
         String a = sc.next();
-        int n = sc.nextInt();
+        int b = sc.nextInt();
 
         ex120825 outer = new ex120825();
         Solution sol = outer.new Solution();
