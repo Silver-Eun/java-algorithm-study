@@ -12,7 +12,7 @@ public class ex012931 {
         ex012931 outer = new ex012931();
         Solution sol = outer.new Solution();
 
-        long result = sol.solution(n);
+        int result = sol.solution(n);
 
         System.out.println(result);
 
