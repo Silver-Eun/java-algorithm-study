@@ -2,7 +2,7 @@ package Lv0;
 
 import java.util.Scanner;
 
-public class ex76501 {
+public class ex086051 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -10,21 +10,15 @@ public class ex76501 {
         int n = sc.nextInt();
 
         int[] absolutes = new int[n];
-        boolean[] signs = new boolean[n];
-
 
         for (int i = 0; i < n; i++) {
             absolutes[i] = sc.nextInt();
         }
 
-        for (int i = 0; i < n; i++) {
-            signs[i] = sc.nextBoolean();
-        }
-
-        ex76501 outer = new ex76501();
+        ex086051 outer = new ex086051();
         Solution sol = outer.new Solution();
 
-        int result = sol.solution(absolutes, signs);
+        int result = sol.solution(absolutes);
 
         System.out.println(result);
 
@@ -32,14 +26,21 @@ public class ex76501 {
     }
 
     class Solution {
-        public int solution(int[] absolutes, boolean[] signs) {
+        public int solution(int[] numbers) {
             int answer = 0;
 
-            for (int i = 0; i < absolutes.length; i++) {
-                if (!signs[i])
-                    answer += -absolutes[i];
-                else
-                    answer += absolutes[i];
+            for (int i = 0; i <= 9; i++) {
+                boolean found = false;
+
+                for (int j = 0; j < numbers.length; j++) {
+                    if (numbers[j] == i) {
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (!found)
+                    answer += i;
             }
 
             return answer;
