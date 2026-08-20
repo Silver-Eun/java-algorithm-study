@@ -34,8 +34,6 @@ public class ex042576 {
         sc.close();
     }
 
-    import java.util.Arrays;
-
     class Solution {
         public String solution(String[] participant, String[] completion) {
 
