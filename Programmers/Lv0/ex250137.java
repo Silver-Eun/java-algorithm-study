@@ -7,24 +7,27 @@ public class ex250137 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int n1 = sc.nextInt();
-        int[] arr1 = new int[n1];
+        int[] bandage = new int[3];
 
-        for (int i = 0; i < n1; i++) {
-            arr1[i] = sc.nextInt();
+        for (int i = 0; i < 3; i++) {
+            bandage[i] = sc.nextInt();
         }
 
-        int n2 = sc.nextInt();
-        int[] arr2 = new int[n2];
+        int health = sc.nextInt();
 
-        for (int i = 0; i < n2; i++) {
-            arr2[i] = sc.nextInt();
+        int n = sc.nextInt();
+
+        int[][] attacks = new int[n][2];
+
+        for (int i = 0; i < n; i++) {
+            attacks[i][0] = sc.nextInt();
+            attacks[i][1] = sc.nextInt();
         }
 
         ex250137 outer = new ex250137();
         Solution sol = outer.new Solution();
 
-        int result = sol.solution(arr1, arr2);
+        int result = sol.solution(bandage, health, attacks);
 
         System.out.println(result);
 
