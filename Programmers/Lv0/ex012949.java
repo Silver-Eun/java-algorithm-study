@@ -17,7 +17,7 @@ public class ex012949 {
         }
 
         int m = sc.nextInt();
-        int[][] arr1 = new int[n][m];
+        int[][] arr1 = new int[m][2];
 
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < 2; j++) {
